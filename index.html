@@ -1,0 +1,322 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" integrity="sha512-dTfge/zgoMYpP7QbHy4gWMEGsbsdZeCXz7irItjcC3sPUFtf0kuFbDz/ixG7ArTxmDjLXDmezHubeNikyKGVyQ==" crossorigin="anonymous">
+
+        <title>SENG Portfolio</title>
+        <style>
+            body {
+                background-image: url("{{ url_for('static', filename='milky_way_background.jpg') }}");
+                background-size: cover;
+                background-repeat: no-repeat;
+                background-attachment: fixed;
+                color: white;
+                font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            }
+            .content-container {
+                background-color: rgba(10, 18, 35, 0.82);
+                border: 1px solid rgba(255, 255, 255, 0.1);
+                border-radius: 18px;
+                padding: 30px;
+                margin-top: 24px;
+                box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+            }
+            .navbar-inverse {
+                background-color: rgba(15, 15, 15, 0.8);
+                border-color: transparent;
+                border-radius: 0;
+            }
+            .profile-header {
+                font-size: 52px;
+                font-family: Georgia, 'Times New Roman', serif;
+                margin-top: 0;
+                margin-bottom: 15px;
+            }
+            .profile-role {
+                font-size: 22px;
+                letter-spacing: 0.08em;
+                text-transform: uppercase;
+                color: #a9d0ff;
+                margin-bottom: 18px;
+            }
+            .profile-summary {
+                font-size: 22px;
+                line-height: 1.7;
+                font-family: Georgia, 'Times New Roman', serif;
+                color: #eef5ff;
+                margin-bottom: 20px;
+            }
+            .section-title {
+                font-size: 30px;
+                margin-top: 0;
+                margin-bottom: 20px;
+                color: #dfeeff;
+            }
+            .section-subtitle {
+                font-size: 20px;
+                color: #a9d0ff;
+                margin-top: 0;
+                margin-bottom: 10px;
+            }
+            .info-card {
+                background: rgba(255, 255, 255, 0.06);
+                border-radius: 12px;
+                padding: 18px 20px;
+                margin-bottom: 15px;
+            }
+            .skill-tag {
+                display: inline-block;
+                background-color: rgba(98, 166, 255, 0.18);
+                color: #dfeeff;
+                border: 1px solid rgba(150, 200, 255, 0.4);
+                border-radius: 20px;
+                padding: 8px 14px;
+                margin: 6px 8px 6px 0;
+                font-size: 14px;
+            }
+            .timeline-item {
+                margin-bottom: 25px;
+                padding-bottom: 18px;
+                border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+            }
+            .timeline-item:last-child {
+                border-bottom: none;
+                margin-bottom: 0;
+                padding-bottom: 0;
+            }
+            .job-title {
+                font-size: 22px;
+                font-weight: 600;
+                margin: 0 0 4px;
+            }
+            .job-meta {
+                font-size: 15px;
+                color: #a9d0ff;
+                margin-bottom: 10px;
+            }
+            ul {
+                padding-left: 20px;
+                margin-top: 10px;
+            }
+            li {
+                line-height: 1.8;
+                margin-bottom: 6px;
+            }
+            .profile-photo {
+                width: 100%;
+                max-width: 320px;
+                border-radius: 50%;
+                border: 4px solid rgba(255,255,255,0.2);
+                box-shadow: 0 8px 20px rgba(0,0,0,0.25);
+            }
+            .social-btn {
+                margin-top: 18px;
+            }
+            .badge-box {
+                background: rgba(255, 255, 255, 0.05);
+                border-radius: 10px;
+                padding: 12px 16px;
+                margin-top: 10px;
+            }
+        </style>
+    </head>
+
+    <body>
+        <nav class="navbar navbar-inverse">
+            <div class="container">
+                <div class="navbar-header">
+                    <a class="navbar-brand" href="#">SCY</a>
+                </div>
+            </div>
+        </nav>
+
+        <div class="container">
+            <div class="content-container">
+                <div class="row">
+                    <div class="col-md-4 text-center">
+                        <img src="{{ url_for('static', filename='Profile_Photo.jpg') }}" alt="Profile Photo" class="profile-photo">
+                        <div class="badge-box">
+                            <strong>IT Engineer</strong>
+                            <br>
+                            <span>Infrastructure | Automation | Platform Operations</span>
+                        </div>
+                    </div>
+                    <div class="col-md-8">
+                        <p class="profile-role"><br><br><br>Infrastructure & Platform Professional</p>
+                        <p class="profile-summary">
+                            "AWS Certified Solutions Architect with strong experience in enterprise infrastructure, cloud administration, storage engineering, and platform operations."
+                        </p>
+                        <h1 class="profile-header">Seng Cheok Yuet</h1>
+                        <div class="social-btn">
+                            <a href="https://www.linkedin.com/in/seng-cheok-yuet" class="btn btn-primary" target="_blank">
+                                <img src="{{ url_for('static', filename='linkedin_logo.jpg') }}" alt="LinkedIn Logo" style="height: 20px; margin-right: 5px;"> View My LinkedIn
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="content-container">
+                <h2 class="section-title">Career Summary</h2>
+                <p>
+                    Over 15 years of experience in enterprise infrastructure, cloud administration, and storage engineering across major technology providers such as Lumen Technologies and EMC. Recent full-time training in Azure, Terraform, Ansible, Docker, Kubernetes, and Azure DevOps CI/CD pipelines has expanded my capabilities in modern cloud operations and platform engineering.
+                </p>
+                <p>
+                    I have delivered measurable operational improvements, including reducing AWS storage costs by 30% and increasing maintenance efficiency by 50% through Python automation. My work blends deep systems, networking, and storage knowledge with practical DevOps and cloud-native solutions that improve stability, scalability, and cost efficiency.
+                </p>
+            </div>
+
+            <div class="content-container">
+                <h2 class="section-title">Tech Skills</h2>
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="info-card">
+                            <h4 class="section-subtitle">Cloud & Infrastructure</h4>
+                            <span class="skill-tag">AWS</span>
+                            <span class="skill-tag">EC2</span>
+                            <span class="skill-tag">S3</span>
+                            <span class="skill-tag">IAM</span>
+                            <span class="skill-tag">EFS</span>
+                            <span class="skill-tag">Azure Eventhub</span>
+                            <span class="skill-tag">Terraform</span>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="info-card">
+                            <h4 class="section-subtitle">DevOps & Automation</h4>
+                            <span class="skill-tag">Docker</span>
+                            <span class="skill-tag">Kubernetes</span>
+                            <span class="skill-tag">CI/CD</span>
+                            <span class="skill-tag">Azure DevOps</span>
+                            <span class="skill-tag">Ansible</span>
+                            <span class="skill-tag">Git</span>
+                            <span class="skill-tag">Python</span>
+                            <span class="skill-tag">Linux Systems Administration</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="info-card">
+                            <h4 class="section-subtitle">Network & Security</h4>
+                            <span class="skill-tag">FortiGate Firewalls</span>
+                            <span class="skill-tag">Azure Security</span>
+                            <span class="skill-tag">Site-to-Site VPN</span>
+                            <span class="skill-tag">Vulnerability Analysis</span>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="info-card">
+                            <h4 class="section-subtitle">Storage & Data</h4>
+                            <span class="skill-tag">EFS Auto-Scaling</span>
+                            <span class="skill-tag">Lifecycle Management</span>
+                            <span class="skill-tag">SAN/NAS</span>
+                            <span class="skill-tag">Storage Infrastructure</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="content-container">
+                <h2 class="section-title">Professional Development</h2>
+
+                <div class="timeline-item">
+                    <h3 class="job-title">Generation Singapore (in partnership with Microsoft and Temasek Polytechnic)</h3>
+                    <div class="job-meta">Cloud Support &amp; DevOps Program Trainee | July 2026 – October 2026</div>
+                    <ul>
+                        <li>Completed a 12-week full-time training program focused on Cloud Support and DevOps engineering.</li>
+                        <li>Architected and provisioned multi-cloud infrastructure using Terraform and automated configuration management through Ansible.</li>
+                        <li>Built, containerized, and deployed a Python web application using Docker and orchestrated services with Kubernetes.</li>
+                        <li>Designed and configured end-to-end CI/CD pipelines in Azure DevOps for automated deployment and Git-based version control.</li>
+                        <li>Implemented Azure security solutions, encryption standards, and device security protocols to reduce system vulnerabilities.</li>
+                        <li>Simulated workload migration strategies by containerizing legacy applications into Docker and orchestrating microservices for improved architecture reusability.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="content-container">
+                <h2 class="section-title">Capstone Project Showcase</h2>
+                <div class="row">
+                    <div class="col-md-5 text-center">
+                        <img src="{{ url_for('static', filename='rain-background.gif') }}" alt="Capstone project preview" class="img-responsive" style="width: 100%; max-width: 420px; border-radius: 14px; border: 1px solid rgba(255,255,255,0.15); box-shadow: 0 10px 25px rgba(0,0,0,0.25); margin-bottom: 15px;">
+                    </div>
+                    <div class="col-md-7">
+                        <div class="info-card">
+                            <h3 class="job-title">Logistics and Supply Chain Data Infrastructure Virtualization</h3>
+                            <p>
+                                A cloud-hosted web application designed for inventory tracking in a logistics or warehouse environment, built to improve operational visibility and decision-making across supply chain workflows.
+                            </p>
+                            <ul>
+                                <li>Integrated the solution with a MySQL database to present inventory records in a web interface.</li>
+                                <li>Implemented a role-based access model for secure user access and operational control.</li>
+                                <li>Applied DevOps and cloud engineering principles to plan and deploy the application in a Kubernetes cluster.</li>
+                                <li>Focused on scalability, reusability, and deployment automation for modern infrastructure environments.</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-md-5">
+                        <div class="info-card">
+                            <h4 class="section-subtitle">Project Stack</h4>
+                            <span class="skill-tag">Python</span>
+                            <span class="skill-tag">MySQL</span>
+                            <span class="skill-tag">Git</span>
+                            <span class="skill-tag">Docker</span>
+                            <span class="skill-tag">Kubernetes</span>
+                            <span class="skill-tag">Azure DevOps</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="content-container">
+                <h2 class="section-title">Work Experience</h2>
+
+                <div class="timeline-item">
+                    <h3 class="job-title">IT Platform Engineer</h3>
+                    <div class="job-meta">Lumen Technologies Singapore Pte. Ltd. | September 2016 – December 2025</div>
+                    <ul>
+                        <li>Designed and implemented AWS EFS scaling and data lifecycle solutions, reducing infrastructure costs by 30%.</li>
+                        <li>Administered AWS and Azure services, internal network routing, and platform operations while maintaining 100% compliance with internal and external SLAs.</li>
+                        <li>Developed Python scripts to automate application monitoring and operational tasks, improving efficiency by 50%.</li>
+                        <li>Configured FortiGate firewalls and security groups, and mapped legacy network topologies to support cloud migration and modernization planning.</li>
+                    </ul>
+                </div>
+
+                <div class="timeline-item">
+                    <h3 class="job-title">Data Storage Engineer</h3>
+                    <div class="job-meta">EMC Computer Systems | November 2010 – September 2016</div>
+                    <ul>
+                        <li>Installed storage arrays, implemented SAN infrastructure, and provisioned storage LUNs with multipathing across open-system environments.</li>
+                        <li>Administered Brocade and Cisco SAN switches and supported data center relocations, storage migrations, and infrastructure transitions.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="content-container">
+                <div class="row">
+                    <div class="col-md-6">
+                        <h2 class="section-title">Education</h2>
+                        <div class="info-card">
+                            <strong>Bachelor of Applied Science (Computer Engineering)</strong>
+                            <br>
+                            Nanyang Technological University (NTU)
+                            <br>
+                            <span class="job-meta">1998</span>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <h2 class="section-title">Certifications</h2>
+                        <ul>
+                            <li>AWS Certified – Solutions Architect (2023)</li>
+                            <li>EMC Cloud Architect - Virtualized Infrastructure Specialist (2015)</li>
+                            <li>ITIL - IT Service Management Certified (2008)</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
